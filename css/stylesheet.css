@@ -1,9 +1,13 @@
 
 img {
     display: block;
-    margin: 10px auto; /* Center images horizontally with automatic left and right margins */
-    max-width: 100%; /* Ensure images are responsive */
+    margin: 10px auto; /* Center images horizontally */
+    max-width: 80%; /* Restrict images to 90% of their container width */
     height: auto; /* Maintain aspect ratio */
+}
+
+h1, h2, p {
+    text-align: center; /* Center text in headings and paragraphs */
 }
 
 /* Specific Sections */
@@ -19,6 +23,7 @@ body.homebg {
     color: #333; /* Text color */
     margin: 0;
     padding: 0;
+    
 }
 
 h1, h2 {
@@ -90,13 +95,13 @@ header nav a:hover {
 
 /* Mission Section */
 .mission {
-    background-color: #f7f7f7; /* Light gray */
-    padding: 20px;
+    background-color: #f7f7f7;
+    padding: 20px 40px; /* Add padding to the left and right */
     margin: 20px auto;
-    width: 80%; /* Centered block */
+    width: 80%;
     border-radius: 10px;
-    border: 1px solid #ddd; /* Subtle border */
-    text-align: center;
+    border: 1px solid #ddd;
+    text-align: center; /* Center text in the mission section */
 }
 
 /* Footer Styles */
