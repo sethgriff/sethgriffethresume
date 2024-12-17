@@ -1,0 +1,116 @@
+
+img {
+    display: block;
+    margin: 10px auto; /* Center images horizontally with automatic left and right margins */
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Specific Sections */
+#hobbies img,
+#video img,
+.mission img {
+    text-align: center; /* Optional fallback for text alignment */
+}
+
+body.homebg {
+    font-family: 'Arial', sans-serif; /* Font family */
+    background-color: #c9c9c9; /* Light blue background */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #020a93; /* Bold blue headings */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Navigation Styles */
+header nav {
+    background-color: #989898; /* Grey background for navigation */
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: white; /* White text for nav links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Hobbies Section */
+#hobbies {
+    background-color: #eef2f5; /* Light gray background */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Centered block */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #ccc; /* Subtle border */
+}
+
+#hobbies h2 {
+    text-align: center;
+    color: #004aad;
+}
+
+/* Video Section */
+#video {
+    background-color: rgb(159, 159, 159); /* Navy background */
+    color: white; /* White text */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Centered block */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ratio-16x9 {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio */
+}
+
+.ratio-16x9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mission Section */
+.mission {
+    background-color: #f7f7f7; /* Light gray */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Centered block */
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Subtle border */
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #646363; /* Dark footer */
+    color: white; /* White text */
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #66ccff; /* Light blue link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;}

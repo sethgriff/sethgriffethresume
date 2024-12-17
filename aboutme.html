@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Griffeth - About Me</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <style>
+        /* Add the Random Quote Generator CSS */
+        .quote-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 40px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .quote-container h2 {
+            font-size: 28px;
+            color: #000597;
+            margin-bottom: 20px;
+        }
+        .quote {
+            font-size: 24px;
+            font-style: italic;
+            color: #555;
+            margin: 30px 0;
+        }
+        .author {
+            font-size: 20px;
+            color: #333;
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #000597;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #888888;
+        }
+    </style>
+</head>
+<body class="homebg">
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" id="top">Home</a> 
+            <a href="tableau.html">Tableau</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <main>
+        <section>
+            <h1>About Me</h1>
+
+            <p>I grew up in a family of 9 (2 brothers, 4 sisters) in South East Idaho.</p>
+            <img src="assets/img/Family Pictures.JPG" alt="Griffeth Family" height="200">
+
+            <section id="hobbies" class="bg-light text-center">
+                <div class="container">
+                    <h2>Hobbies</h2>
+                    <ol>
+                        <li>Sports
+                            <ul>
+                                <li>Football</li>
+                                <li>Basketball</li>
+                                <li>Track</li>
+                            </ul>
+                        </li>
+                        <li>Outdoors
+                            <ul>
+                                <li>Hunting</li>
+                                <li>Biking</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <img src="assets/img/Football.png" alt="Seth Playing Football" height="200">
+            <p>From a young age, I fell in love with all types of sports, but I stuck with football and rugby. 
+                After high school, I played rugby at the University of Utah before going on a mission. 
+                Currently, I am a walk-on at BYU for football.</p>
+
+            <section id="video" class="bg-dark text-center py-5">
+                <div class="container">
+                    <h2 class="text-white mb-4">My Football Highlights</h2>
+                    <div class="ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.youtube.com/embed/afLq9iuaHQI?si=37sQEEbVpIL0pLYj" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <br>
+            <p>In 2022, I started my mission for the Church of Jesus Christ of Latter-day Saints. 
+                I was privileged to serve in the Budapest, Hungary Mission, where I spoke Hungarian. 
+                Hungary is a very special place to me now. I love everything about it—the people, the food, 
+                the culture, and the architecture.</p>
+            <img src="assets/img/Translating.jpg" alt="Seth translating for the mayor and humanitarian missionaries" height="200">
+        
+            <p>An interesting thing about me is that I am also a model and actor, having been in a couple of films, 
+                but most recently in a T.C. Christensen film.</p>
+            <img src="assets/img/Seth & TC.jpg" alt="Modeling" height="300">
+
+            <p>After watching TC Christensen it got me interested in video editing and I was able to film, edit, and produce a 
+                few videos for my church. </p>
+        </section>
+
+        <!-- Random Inspirational Quote Generator Section -->
+        <section class="quote-container">
+            <h2>Inspirational Quote</h2>
+            <p class="quote" id="quoteText">"Click the button to get a motivational quote!"</p>
+            <p class="author" id="quoteAuthor"></p>
+            <button class="button" onclick="generateQuote()">Get New Quote</button>
+        </section>
+    </main>
+
+    <br>
+    <!-- Back to Top Link -->
+    <footer>
+        <a href="#top">Back to the top</a>
+    </footer>
+
+    <br>
+
+    <script>
+        // JavaScript for Random Inspirational Quote Generator
+        const quotes = [
+            {
+                quote: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                author: "Winston Churchill"
+            },
+            {
+                quote: "It does not matter how slowly you go as long as you do not stop.",
+                author: "Confucius"
+            },
+            {
+                quote: "You miss 100% of the shots you don’t take.",
+                author: "Wayne Gretzky"
+            },
+            {
+                quote: "Believe you can and you're halfway there.",
+                author: "Theodore Roosevelt"
+            },
+            {
+                quote: "Your time is limited, don't waste it living someone else's life.",
+                author: "Steve Jobs"
+            },
+            {
+                quote: "The best way to predict the future is to create it.",
+                author: "Abraham Lincoln"
+            }
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+
+            document.getElementById('quoteText').textContent = `"${randomQuote.quote}"`;
+            document.getElementById('quoteAuthor').textContent = `- ${randomQuote.author}`;
+        }
+    </script>
+</body>
+</html>
